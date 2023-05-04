@@ -39,7 +39,7 @@ Here's an overview of what each `/setup` variable does:
 - `style` - The style of event management to use (`fully automatic`, `balanced`, `manual`).
 - `mode` - The mode to use for event management (detailed explanations below).
 
-### 🎨 style Options 🎨
+### 🎨 `style` Options 🎨
 
 You can set the style variable to either embed or text. This determines what event announcements will look like.
 
