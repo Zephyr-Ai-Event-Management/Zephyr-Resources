@@ -23,6 +23,7 @@ An example "guild_body" JSON object looks like:
         "blacklisted": false,
         "active_tickets": [],
         "active_events": [],
+        "current_schedule_tmp": [],
         "vtc_events": [],
         "truckersmp_info": null
 }
