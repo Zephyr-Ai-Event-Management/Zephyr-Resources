@@ -7,25 +7,26 @@
 To get started with Zephyr, use the `/setup` command. This will guide you through a series of prompts to customize the bot's behavior for your server. Once all variables have been defined with the `/setup` command, the bot will save the server's config to our databases.
 
 An example "guild_body" JSON object looks like:
-json
+```json
 {
-        "guild_id": ctx.guild.id,
-        "guild_name": ctx.guild.name,
-        "guild_owner": ctx.guild.owner.id,
+        "guild_id": 1103578895560749126,
+        "guild_name": "Zephyr",
+        "guild_owner": 755493797160288286,
         "guild_config": {
-            "ticket_category": ticket_category.id,
-            "channel": channel.id,
-            "role": role.id,
-            "style": style,
-            "mode": mode
+            "ticket_category": 1103613805411446804,
+            "channel": 1103613860763664424,
+            "role": 1103614077290430524,
+            "style": "embed",
+            "mode": "fully automatic"
         },
-        "joined_at": bot.get_guild(ctx.guild.id).get_member(bot.user.id).joined_at,
-        "blacklisted": False,
+        "joined_at": 0,
+        "blacklisted": false,
         "active_tickets": [],
         "active_events": [],
-        "vtc_events": tmp_events["response"],
-        "truckersmp_info": tmp
+        "vtc_events": [],
+        "truckersmp_info": null
 }
+```
 You can use `/config` to view your server's configuration, which will include the options you set during the `/setup` process.
 
 ## `/setup` Configuration Variables
