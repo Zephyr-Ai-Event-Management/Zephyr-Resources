@@ -39,11 +39,12 @@ Here's an overview of what each `/setup` variable does:
 - `style` - The style of event management to use (`fully automatic`, `balanced`, `manual`).
 - `mode` - The mode to use for event management (detailed explanations below).
 
-### 🎨 `style` Options 🎨
+### 🎨 style Options 🎨
 
-- `fully automatic` - The bot handles every aspect of event management by itself. It'll accept event invites if the schedule is clear and if the event matches any predetermined requirements. Predetermined requirements can be set using the [website](https://okayge.xyz/zephyr/settings#eventacceptance).
-- `balanced` - The bot will handle some aspects of event management. Exactly what it will manage can be toggled on/off via the [website](https://okayge.xyz/zephyr/settings#eventacceptance). When balanced mode is selected, Zephyr will still remain scanning event tickets - unless toggled off.
-- `manual` - The bot will do very little by itself, but users can still use some of its commands. With this preset mode selected,  Zephyr will **not** scan event tickets.
+You can set the style variable to either embed or text. This determines what event announcements will look like.
+
+If set to embed, event announcements will be sent in the form of an embed, while if set to text, they will be sent in plain text form.
+
 
 ### 🔍 `mode` Options 🔍
 
