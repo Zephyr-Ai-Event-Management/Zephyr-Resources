@@ -6,8 +6,8 @@ This object represents a ticket/channel in a Discord server related to events. I
 Properties
 ----------
 
-- `author` (integer): The Discord ID of the message author.
-- `id` (integer): The Discord channel ID for the ticket.
+- `author` (string): The Discord ID of the message author.
+- `id` (string): The Discord channel ID for the ticket.
 - `isEvent` (boolean): Indicates whether the ticket is related to an event. This property will always be `true` for event tickets.
 - `invites` (array): An array of invite objects sent in the ticket/channel.
 
@@ -21,7 +21,7 @@ Properties
 
 - `id` (integer): The TruckersMP event ID for the event invitation.
 - `acceptable` (boolean or null): Indicates whether we can attend the event or not. If the value is `null`, it means the invitation is pending review.
-- `claimedBy` (integer or null): The Discord ID of the person who has currently claimed the ticket. If no one has claimed the ticket, the value will be `null`.
+- `claimedBy` (string or null): The Discord ID of the person who has currently claimed the ticket. If no one has claimed the ticket, the value will be `null`.
 - `claimed` (boolean): Indicates whether the ticket is currently claimed (`true`) or not claimed (`false`).
 
 Example Ticket Object
