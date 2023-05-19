@@ -41,7 +41,8 @@ Example Ticket Object
             "destination": "Pori (Baltic Metalgury)",
             "meetup": 1684863000000,
             "departure": 1684864800000,
-            "embed": "1108963092064383007"
+            "embed": "1108963092064383007",
+            "finished": false
         }
     ]
 }
