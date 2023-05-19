@@ -1,40 +1,43 @@
-When a ticket reaches the point where it's confirmed to be an event and is attendable, we store that ticket in our DB. 
+Ticket Object
+=============
 
-Data store is structred like this:
+This object represents a ticket/channel in a Discord server related to events. It contains information about the ticket and any associated invites.
+
+Properties
+----------
+
+- `author` (integer): The Discord ID of the message author.
+- `id` (integer): The Discord channel ID for the ticket.
+- `isEvent` (boolean): Indicates whether the ticket is related to an event. This property will always be `true` for event tickets.
+- `invites` (array): An array of invite objects sent in the ticket/channel.
+
+Invite Object
+-------------
+
+An invite object represents an invitation associated with the ticket.
+
+Properties
+----------
+
+- `id` (integer): The TruckersMP event ID for the event invitation.
+- `acceptable` (boolean or null): Indicates whether we can attend the event or not. If the value is `null`, it means the invitation is pending review.
+- `claimedBy` (integer or null): The Discord ID of the person who has currently claimed the ticket. If no one has claimed the ticket, the value will be `null`.
+- `claimed` (boolean): Indicates whether the ticket is currently claimed (`true`) or not claimed (`false`).
+
+Example Ticket Object
+---------------------
 ```json
 {
-    "author": 755493797160288286,
-    "id": 1104068604892291102,
-    "isEvent": true,
-    "invites": {
-       "one": {
-        "claimedBy": null,
-        "claimed": false,
-        "event": {
-            "id": 12371,
-            "location": "Kouvola (Lintukainen)",
-            "destination": "Pori (Baltic Metalgury)",
-            "meetup": 1684863000,
-            "departure": 1684864800
-        },
-        "finished": false
-       }
-     },
-    "global_finish": false,
-    "invite_count": 0
+  "author": 755493797160288286,
+  "id": 1104068604892291102,
+  "isEvent": true,
+  "invites": [
+    {
+      "id": 12371,
+      "acceptable": null,
+      "claimedBy": null,
+      "claimed": false
+    }
+  ]
 }
 ```
-
-Each ticket channel gets its own `ticket_object` in the tickets collection. Once a channel/ticket is deleted, that ticket's object is deleted from the collection.
-
-An object contains the following:
-| Name | Type | Value | 
-| ---- | ---- | ------ |
-| author | int   | The discordID of the author of the ticket    |
-| id | init   | The ID of the discord channel for that ticket |
-| isEvent | boolean   | This will always be true. It indicates whether the ticket is an event ticket or not     |
-| invites | array | An array that contains information event invites sent within a channel |
-| one | str | Which invite it is. I.e one, two. These are decided based on invite_count. |
-| claimedBy | int | The discordId of the user who claimed the invite/ticket |
-| claimed | boolean | Indicates whether or not the ticket/invite is currently claimed |
-
