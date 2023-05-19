@@ -34,6 +34,10 @@ Example Ticket Object
     "invites": [
         {
             "id": 12371,
+            "location": "Kouvola (Lintukainen)",
+            "destination": "Pori (Baltic Metalgury)",
+            "meetup": 1684863000,
+            "departure": 1684864800,
             "acceptable": null,
             "claimedBy": null,
             "claimed": false
