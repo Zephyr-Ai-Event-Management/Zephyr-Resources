@@ -21,8 +21,7 @@ Properties
 
 - `id` (integer): The TruckersMP event ID for the event invitation.
 - `acceptable` (boolean or null): Indicates whether we can attend the event or not. If the value is `null`, it means the invitation is pending review.
-- `claimedBy` (string or null): The Discord ID of the person who has currently claimed the ticket. If no one has claimed the ticket, the value will be `null`.
-- `claimed` (boolean): Indicates whether the ticket is currently claimed (`true`) or not claimed (`false`).
+- `embed` (string): The ID of the event info embed, used by the bot to identify event information and make buttons work.
 
 Example Ticket Object
 ---------------------
@@ -38,11 +37,7 @@ Example Ticket Object
             "destination": "Pori (Baltic Metalgury)",
             "meetup": 1684863000,
             "departure": 1684864800,
-            "acceptable": null,
-            "claimedBy": null,
-            "claimed": false
+            "embed": "1108963092064383007"
         }
-
     ]
 }
-```
