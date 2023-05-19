@@ -20,7 +20,10 @@ Properties
 ----------
 
 - `id` (integer): The TruckersMP event ID for the event invitation.
-- `acceptable` (boolean or null): Indicates whether we can attend the event or not. If the value is `null`, it means the invitation is pending review.
+- `location` (string): The city and location (slot/company) where the event/convoy begins.
+- `destination` (string): The city and location (slot/company) where the event/convoy ends.
+- `meetup` (integer): The timestamp in milliseconds 30 minutes before the departure time. This is when the convoy is due to meetup.
+- `departure` (integer): The timestamp in milliseconds. This is the time when the convoy is due to depart.
 - `embed` (string): The ID of the event info embed, used by the bot to identify event information and make buttons work.
 
 Example Ticket Object
@@ -35,8 +38,8 @@ Example Ticket Object
             "id": 12371,
             "location": "Kouvola (Lintukainen)",
             "destination": "Pori (Baltic Metalgury)",
-            "meetup": 1684863000,
-            "departure": 1684864800,
+            "meetup": 1684863000000,
+            "departure": 1684864800000,
             "embed": "1108963092064383007"
         }
     ]
