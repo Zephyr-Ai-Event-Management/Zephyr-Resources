@@ -25,6 +25,7 @@ Properties
 - `meetup` (integer): The timestamp in milliseconds 30 minutes before the departure time. This is when the convoy is due to meetup.
 - `departure` (integer): The timestamp in milliseconds. This is the time when the convoy is due to depart.
 - `embed` (string): The ID of the event info embed, used by the bot to identify event information and make buttons work.
+- `finished` (boolean): Indicates whether the ticket has been dealt with. This is set to `true` upon acceptance and upon decline. 
 
 Example Ticket Object
 ---------------------
