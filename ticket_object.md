@@ -28,16 +28,17 @@ Example Ticket Object
 ---------------------
 ```json
 {
-  "author": 755493797160288286,
-  "id": 1104068604892291102,
-  "isEvent": true,
-  "invites": [
-    {
-      "id": 12371,
-      "acceptable": null,
-      "claimedBy": null,
-      "claimed": false
-    }
-  ]
+    "author": "755493797160288286",
+    "id" : "1104068604892291102",
+    "isEvent": true,
+    "invites": [
+        {
+            "id": 12371,
+            "acceptable": null,
+            "claimedBy": null,
+            "claimed": false
+        }
+
+    ]
 }
 ```
